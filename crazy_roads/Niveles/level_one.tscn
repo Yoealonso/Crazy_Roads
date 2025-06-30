@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://snjtebp7etfl"]
+
+[ext_resource type="PackedScene" uid="uid://cr0qqtjegaxwn" path="res://Texturas/flatground.tscn" id="1_30jrm"]
+[ext_resource type="PackedScene" uid="uid://4fji1ixuld1h" path="res://Protagonistas/player.tscn" id="2_yvhx8"]
+[ext_resource type="Script" uid="uid://bx4f84pvrgeci" path="res://Protagonistas/player.gd" id="3_mej56"]
+[ext_resource type="PackedScene" uid="uid://ca05yuqvg1onv" path="res://Texturas/Finish.tscn" id="3_trjer"]
+[ext_resource type="Script" uid="uid://2nql5uw0souy" path="res://Niveles/cameraFollow.gd" id="3_yvhx8"]
+
+[node name="Level_one" type="Node2D"]
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_30jrm")]
+position = Vector2(631, 374)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("1_30jrm")]
+position = Vector2(1876, 373)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("1_30jrm")]
+position = Vector2(3126, 371)
+rotation = -0.00719863
+
+[node name="Node2D" parent="." instance=ExtResource("2_yvhx8")]
+position = Vector2(289, 229)
+script = ExtResource("3_mej56")
+
+[node name="Camera2D" type="Camera2D" parent="Node2D" node_paths=PackedStringArray("object_to_follow")]
+position = Vector2(313, 90)
+script = ExtResource("3_yvhx8")
+object_to_follow = NodePath("..")
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("1_30jrm")]
+position = Vector2(4354, 369)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("1_30jrm")]
+position = Vector2(5597, 369)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("1_30jrm")]
+position = Vector2(6822, 368)
+
+[node name="StaticBody2D7" parent="." instance=ExtResource("3_trjer")]
+position = Vector2(11532, 90)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("1_30jrm")]
+position = Vector2(8017, 368)
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("1_30jrm")]
+position = Vector2(9263, 370)
+
+[node name="StaticBody2D10" parent="." instance=ExtResource("1_30jrm")]
+position = Vector2(10508, 367)
+
+[node name="StaticBody2D11" parent="." instance=ExtResource("1_30jrm")]
+position = Vector2(11755, 370)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 591.0
+offset_top = 106.0
+offset_right = 660.0
+offset_bottom = 129.0
+text = "Usa las flechas ↑ para avanzar  y ↓ para retroceder"

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca05yuqvg1onv"]
+
+[ext_resource type="Texture2D" uid="uid://bdmu5is0kvwpi" path="res://Texturas/Cartoon_Medieval_Training Arena_Level_Set_Building - Wide Door 03.png" id="1_kxoc7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15602"]
+size = Vector2(107, 122)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CartoonMedievalTrainingArenaLevelSetBuilding-WideDoor03" type="Sprite2D" parent="."]
+position = Vector2(263, 142)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kxoc7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(262.5, 144)
+shape = SubResource("RectangleShape2D_15602")

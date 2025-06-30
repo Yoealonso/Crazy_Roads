@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://4fji1ixuld1h"]
+
+[ext_resource type="Texture2D" uid="uid://bq00irb2sn2bt" path="res://character_pink_duck.png" id="1_cnc0k"]
+[ext_resource type="Texture2D" uid="uid://uo12j1u6wb87" path="res://Protagonistas/character_pink_duck.png" id="2_od0d5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_od0d5"]
+radius = 43.7379
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mkpjl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_od0d5")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Personaje" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cnc0k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 23)
+shape = SubResource("CircleShape2D_od0d5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mkpjl")
+animation = &"walk"

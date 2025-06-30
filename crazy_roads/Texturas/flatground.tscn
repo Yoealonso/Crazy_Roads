@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr0qqtjegaxwn"]
+
+[ext_resource type="Texture2D" uid="uid://bwth4abxsjm8" path="res://Texturas/Flatground2.png" id="1_wckex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48eui"]
+size = Vector2(1253, 91)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Flatground2" type="Sprite2D" parent="."]
+position = Vector2(-3, 148)
+texture = ExtResource("1_wckex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, 0)
+shape = SubResource("RectangleShape2D_48eui")
